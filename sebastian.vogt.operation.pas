@@ -121,12 +121,11 @@ end;
 function TBaseOperation.Division(): Double;
 begin
   if FOperantB = 0 then begin
+      Result := 0;
       if Assigned(OnDivisionByZero) then begin
-          Result := 0;
           OnDivisionByZero(Self);
-
-          Exit;
       end;
+      Exit;
   end else begin
     Result := FOperantA / FOperantB;
   end;

@@ -122,8 +122,9 @@ function TBaseOperation.Division(): Double;
 begin
   if FOperantB = 0 then begin
       if Assigned(OnDivisionByZero) then begin
-          OnDivisionByZero(Self);
           Result := 0;
+          OnDivisionByZero(Self);
+
           Exit;
       end;
   end else begin
