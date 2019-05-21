@@ -11,10 +11,10 @@ type
   TBaseOperation = class
 
     const
-      OP_ADDITION = 'addition';
-      OP_SUBTRACTION = 'subtraction';
-      OP_MULTIPLICATION = 'multiplication';
-      OP_DIVISION = 'division';
+      OP_ADDITION = '+';
+      OP_SUBTRACTION = '-';
+      OP_MULTIPLICATION = '*';
+      OP_DIVISION = '/';
 
 
 
@@ -122,8 +122,9 @@ function TBaseOperation.Division(): Double;
 begin
   if FOperantB = 0 then begin
       if Assigned(OnDivisionByZero) then begin
+          Result := 0;
           OnDivisionByZero(Self);
-          //Result := 0;
+
           Exit;
       end;
   end else begin

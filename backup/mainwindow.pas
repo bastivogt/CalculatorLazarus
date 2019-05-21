@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
-  sebastian.vogt.operation;
+  ExtCtrls, sebastian.vogt.operation;
 
 type
 
@@ -34,6 +34,7 @@ type
     btnEquals: TButton;
     btnC: TButton;
     btnCE: TButton;
+    operationTxt: TEdit;
     outputTxt: TEdit;
     testenBtn: TButton;
 
@@ -44,7 +45,10 @@ type
     closeMM: TMenuItem;
     helpMM: TMenuItem;
     infoMM: TMenuItem;
+    procedure btnCClick(Sender: TObject);
+    procedure btnEqualsClick(Sender: TObject);
     procedure btnNumberClick(Sender: TObject);
+    procedure btnOperatorClick(Sender: TObject);
     procedure btnPointClick(Sender: TObject);
     procedure btnSignClick(Sender: TObject);
     procedure divisionByZero(Sender: TObject);
@@ -67,17 +71,81 @@ var
   baseOperation: TBaseOperation;
   point: Boolean;
   ZeroPressedAtFirst: Boolean;
+  operantA: Boolean;
+  operantB: Boolean;
+  operation: string;
+  strOperantA: string;
+  strOperantB: string;
+
 
 implementation
 
 {$R *.lfm}
 
 { TcalculatorFrm }
-
+// listener division by zero
 procedure TcalculatorFrm.divisionByZero(Sender: TObject);
 begin
-  ShowMessage('Durch 0 geht nicht!!!');
+  //ShowMessage('Durch 0 geht nicht!!!');
+  operationTxt.Text := 'Durch 0 geht nicht!!!';
+  operantA := False;
+  operation := '';
+  ZeroPressedAtFirst := False;
+
 end;
+
+
+// Button C
+procedure TcalculatorFrm.btnCClick(Sender: TObject);
+begin
+   outputTxt.Text := '0';
+   operationTxt.Text := '';
+   operantA := False;
+   operation := '';
+   ZeroPressedAtFirst := False;
+begin
+
+end;
+end;
+
+
+// Operator Button
+procedure TcalculatorFrm.btnOperatorClick(Sender: TObject);
+var me: TButton;
+begin
+  me := Sender as TButton;
+
+  if not operantA then begin
+    strOperantA := outputTxt.Text;
+    baseOperation.OperantA := StrToFloat(strOperantA);
+    operantA := True;
+    point := False;
+    ZeroPressedAtFirst := False;
+  end;
+
+  operation := me.Caption;
+  operationTxt.Text := strOperantA + ' ' + operation;
+  outputTxt.Text := '0';
+
+end;
+
+
+// Equals Button
+procedure TcalculatorFrm.btnEqualsClick(Sender: TObject);
+begin
+  if operantA then begin
+     strOperantB := outputTxt.Text;
+     baseOperation.OperantB := StrToFloat(strOperantB);
+     //baseOperation.Operation(operation);
+     outputTxt.Text := FloatToStr(baseOperation.Operation(operation));
+     operationTxt.Text := '';
+     operantA := False;
+
+     //operantB := True;
+  end;
+end;
+
+
 
 // Nummern Buttons
 procedure TcalculatorFrm.btnNumberClick(Sender: TObject);
@@ -105,6 +173,8 @@ begin
 
   //ShowMessage(me.Caption);
 end;
+
+
 
 // btnPoint
 procedure TcalculatorFrm.btnPointClick(Sender: TObject);
@@ -156,6 +226,7 @@ begin
   end;*)
 end;
 
+// remove first zero
 procedure TcalculatorFrm.removeFirstZero();
 var len: Integer;
 var str: string;
@@ -174,11 +245,11 @@ procedure TcalculatorFrm.testenBtnClick(Sender: TObject);
 var str: string;
 begin
   str := '0.5';
-  ShowMessage(str.Substring(1, 1));
+  //ShowMessage(str.Substring(1, 1));
   //ShowMessage('Hu hu!');
   baseOperation.OperantA := 5;
-  baseOperation.OperantB := 0;
-  //baseOperation.Operation(TBaseOperation.OP_ADDITION);
+  baseOperation.OperantB := 3;
+  baseOperation.Operation(TBaseOperation.OP_ADDITION);
   //baseOperation.Operation(TBaseOperation.OP_SUBTRACTION);
   //baseOperation.Operation(TBaseOperation.OP_MULTIPLICATION);
   //baseOperation.Operation(TBaseOperation.OP_DIVISION);

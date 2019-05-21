@@ -11,10 +11,10 @@ type
   TBaseOperation = class
 
     const
-      OP_ADDITION = 'addition';
-      OP_SUBTRACTION = 'subtraction';
-      OP_MULTIPLICATION = 'multiplication';
-      OP_DIVISION = 'division';
+      OP_ADDITION = '+';
+      OP_SUBTRACTION = '-';
+      OP_MULTIPLICATION = '*';
+      OP_DIVISION = '/';
 
 
 
@@ -123,31 +123,12 @@ begin
   if FOperantB = 0 then begin
       if Assigned(OnDivisionByZero) then begin
           OnDivisionByZero(Self);
-          //Result := 0;
+          Result := 0;
           Exit;
       end;
   end else begin
     Result := FOperantA / FOperantB;
   end;
-
-
-
-  (*try
-
-    Result := FOperantA / FOperantB;
-  except
-     on EZeroDivide do begin
-       if Assigned(OnDivisionByZero) then begin
-           OnDivisionByZero(Self);
-       end;
-     end;
-     else begin
-       Result := 0;
-     end;
-  end;*)
-
-
-
 end;
 
 end.

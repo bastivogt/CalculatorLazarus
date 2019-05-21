@@ -1,10 +1,10 @@
 object calculatorFrm: TcalculatorFrm
-  Left = 320
-  Height = 526
-  Top = 171
+  Left = 420
+  Height = 687
+  Top = 239
   Width = 432
   Caption = 'Rechner'
-  ClientHeight = 506
+  ClientHeight = 667
   ClientWidth = 432
   Constraints.MaxWidth = 432
   Constraints.MinWidth = 432
@@ -423,328 +423,8 @@ object calculatorFrm: TcalculatorFrm
     444444444444444459F4FF01617C7D0751F771BA0000000049454E44AE426082
   }
   Menu = mainMenu
+  Position = poDesktopCenter
   LCLVersion = '2.0.2.0'
-  object testenBtn: TButton
-    Left = 336
-    Height = 25
-    Top = 471
-    Width = 75
-    Caption = 'Testen'
-    OnClick = testenBtnClick
-    TabOrder = 21
-  end
-  object btn7: TButton
-    Left = 8
-    Height = 80
-    Top = 80
-    Width = 80
-    Caption = '7'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 0
-  end
-  object btn8: TButton
-    Left = 88
-    Height = 80
-    Top = 80
-    Width = 80
-    Caption = '8'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 1
-  end
-  object btn9: TButton
-    Left = 168
-    Height = 80
-    Top = 80
-    Width = 80
-    Caption = '9'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 2
-  end
-  object btn4: TButton
-    Left = 8
-    Height = 80
-    Top = 160
-    Width = 80
-    Caption = '4'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 5
-  end
-  object btn5: TButton
-    Left = 88
-    Height = 80
-    Top = 160
-    Width = 80
-    Caption = '5'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 6
-  end
-  object btn6: TButton
-    Left = 168
-    Height = 80
-    Top = 160
-    Width = 80
-    Caption = '6'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 7
-  end
-  object btn1: TButton
-    Left = 8
-    Height = 80
-    Top = 240
-    Width = 80
-    Caption = '1'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 10
-  end
-  object btn2: TButton
-    Left = 88
-    Height = 80
-    Top = 240
-    Width = 80
-    Caption = '2'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 11
-  end
-  object btn3: TButton
-    Left = 168
-    Height = 80
-    Top = 240
-    Width = 80
-    Caption = '3'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 12
-  end
-  object Button10: TButton
-    Left = 216
-    Height = 80
-    Top = 416
-    Width = 80
-    Caption = '1'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 19
-  end
-  object btn0: TButton
-    Left = 88
-    Height = 80
-    Top = 320
-    Width = 80
-    Caption = '0'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnNumberClick
-    ParentFont = False
-    TabOrder = 15
-  end
-  object btnSign: TButton
-    Left = 8
-    Height = 80
-    Top = 320
-    Width = 80
-    Caption = '+-'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnSignClick
-    ParentFont = False
-    TabOrder = 14
-  end
-  object btnPoint: TButton
-    Left = 168
-    Height = 80
-    Top = 320
-    Width = 80
-    Caption = ','
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    OnClick = btnPointClick
-    ParentFont = False
-    TabOrder = 16
-  end
-  object btnDivision: TButton
-    Left = 264
-    Height = 80
-    Top = 80
-    Width = 80
-    Caption = '/'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 3
-  end
-  object btnMultiplication: TButton
-    Left = 264
-    Height = 80
-    Top = 160
-    Width = 80
-    Caption = '*'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 8
-  end
-  object btnSubstract: TButton
-    Left = 264
-    Height = 80
-    Top = 240
-    Width = 80
-    Caption = '-'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 13
-  end
-  object btnAddition: TButton
-    Left = 264
-    Height = 80
-    Top = 320
-    Width = 80
-    Caption = '+'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 17
-  end
-  object btnEquals: TButton
-    Left = 344
-    Height = 160
-    Top = 240
-    Width = 80
-    Caption = '='
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 18
-  end
-  object btnC: TButton
-    Left = 344
-    Height = 80
-    Top = 160
-    Width = 80
-    Caption = 'C'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 9
-  end
-  object btnCE: TButton
-    Left = 344
-    Height = 80
-    Top = 80
-    Width = 80
-    Caption = 'CE'
-    Font.CharSet = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentFont = False
-    TabOrder = 4
-  end
   object outputTxt: TEdit
     Left = 8
     Height = 58
@@ -761,13 +441,357 @@ object calculatorFrm: TcalculatorFrm
     OnChange = outputTxtChange
     ParentFont = False
     ReadOnly = True
-    TabOrder = 20
+    TabOrder = 19
     Text = '0'
+  end
+  object testenBtn: TButton
+    Left = 320
+    Height = 25
+    Top = 552
+    Width = 75
+    Caption = 'Testen'
+    OnClick = testenBtnClick
+    TabOrder = 21
+  end
+  object btn7: TButton
+    Left = 8
+    Height = 80
+    Top = 112
+    Width = 80
+    Caption = '7'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btn8: TButton
+    Left = 88
+    Height = 80
+    Top = 112
+    Width = 80
+    Caption = '8'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btn9: TButton
+    Left = 168
+    Height = 80
+    Top = 112
+    Width = 80
+    Caption = '9'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btn4: TButton
+    Left = 8
+    Height = 80
+    Top = 192
+    Width = 80
+    Caption = '4'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 5
+  end
+  object btn5: TButton
+    Left = 88
+    Height = 80
+    Top = 192
+    Width = 80
+    Caption = '5'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object btn6: TButton
+    Left = 168
+    Height = 80
+    Top = 192
+    Width = 80
+    Caption = '6'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object btn1: TButton
+    Left = 8
+    Height = 80
+    Top = 272
+    Width = 80
+    Caption = '1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 10
+  end
+  object btn2: TButton
+    Left = 88
+    Height = 80
+    Top = 272
+    Width = 80
+    Caption = '2'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 11
+  end
+  object btn3: TButton
+    Left = 168
+    Height = 80
+    Top = 272
+    Width = 80
+    Caption = '3'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Button10: TButton
+    Left = 208
+    Height = 80
+    Top = 512
+    Width = 80
+    Caption = '1'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 20
+  end
+  object btn0: TButton
+    Left = 88
+    Height = 80
+    Top = 352
+    Width = 80
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnNumberClick
+    ParentFont = False
+    TabOrder = 15
+  end
+  object btnSign: TButton
+    Left = 8
+    Height = 80
+    Top = 352
+    Width = 80
+    Caption = '+-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnSignClick
+    ParentFont = False
+    TabOrder = 14
+  end
+  object btnPoint: TButton
+    Left = 168
+    Height = 80
+    Top = 352
+    Width = 80
+    Caption = ','
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnPointClick
+    ParentFont = False
+    TabOrder = 16
+  end
+  object btnDivision: TButton
+    Left = 264
+    Height = 80
+    Top = 112
+    Width = 80
+    Caption = '/'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnOperatorClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btnMultiplication: TButton
+    Left = 264
+    Height = 80
+    Top = 192
+    Width = 80
+    Caption = '*'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnOperatorClick
+    ParentFont = False
+    TabOrder = 8
+  end
+  object btnSubstract: TButton
+    Left = 264
+    Height = 80
+    Top = 272
+    Width = 80
+    Caption = '-'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnOperatorClick
+    ParentFont = False
+    TabOrder = 13
+  end
+  object btnAddition: TButton
+    Left = 264
+    Height = 80
+    Top = 352
+    Width = 80
+    Caption = '+'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnOperatorClick
+    ParentFont = False
+    TabOrder = 17
+  end
+  object btnEquals: TButton
+    Left = 344
+    Height = 160
+    Top = 272
+    Width = 80
+    Caption = '='
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnEqualsClick
+    ParentFont = False
+    TabOrder = 18
+  end
+  object btnC: TButton
+    Left = 344
+    Height = 80
+    Top = 192
+    Width = 80
+    Caption = 'C'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = btnCClick
+    ParentFont = False
+    TabOrder = 9
+  end
+  object btnCE: TButton
+    Left = 344
+    Height = 80
+    Top = 112
+    Width = 80
+    Caption = 'CE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+  end
+  object operationTxt: TEdit
+    Left = 8
+    Height = 32
+    Top = 72
+    Width = 416
+    BorderStyle = bsNone
+    Color = clSkyBlue
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 22
   end
   object mainMenu: TMainMenu
     Images = iconList
-    left = 16
-    top = 472
+    left = 32
+    top = 560
     object fileMM: TMenuItem
       Caption = '&Datei'
       object closeMM: TMenuItem
@@ -786,8 +810,8 @@ object calculatorFrm: TcalculatorFrm
     end
   end
   object iconList: TImageList
-    left = 64
-    top = 472
+    left = 88
+    top = 560
     Bitmap = {
       4C69020000001000000010000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

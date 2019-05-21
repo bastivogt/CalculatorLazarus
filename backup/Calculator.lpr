@@ -21,7 +21,8 @@ begin
   baseOperation.OnDivisionByZero := @calculatorFrm.divisionByZero;
 
   point := False;
-  startWithZero := False;
+  ZeroPressedAtFirst := False;
+  operantA := false;
   Application.Run;
 end.
 
