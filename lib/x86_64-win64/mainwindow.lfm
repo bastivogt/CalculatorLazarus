@@ -757,6 +757,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
+    MaxLength = 16
     OnChange = outputTxtChange
     ParentFont = False
     ReadOnly = True

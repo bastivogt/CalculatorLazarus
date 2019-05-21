@@ -55,7 +55,7 @@ type
 
 
 
-    procedure cuttingFirstZero();
+    procedure cremoveFirstZero();
   private
 
   public
@@ -97,7 +97,7 @@ begin
     outputTxt.Text := outputTxt.Text + csVal;
   end;
 
-  cuttingFirstZero();
+  removeFirstZero();
 
 
 
@@ -156,7 +156,7 @@ begin
   end;*)
 end;
 
-procedure TcalculatorFrm.cuttingFirstZero();
+procedure TcalculatorFrm.removeFirstZero();
 var len: Integer;
 var str: string;
 var tempStr: string;
