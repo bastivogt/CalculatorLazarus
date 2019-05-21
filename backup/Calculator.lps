@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="Calculator.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="22" Y="24"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainwindow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="calculatorFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainWindow"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="116"/>
+        <CursorPos X="104" Y="139"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="sebastian.vogt.operation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="98"/>
+        <CursorPos X="54" Y="125"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="34" Column="45" TopLine="6"/>
+      </Position1>
+      <Position2>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="35" Column="45" TopLine="6"/>
+      </Position2>
+      <Position3>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="36" Column="45" TopLine="6"/>
+      </Position3>
+      <Position4>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="37" Column="45" TopLine="6"/>
+      </Position4>
+      <Position5>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="38" Column="45" TopLine="6"/>
+      </Position5>
+      <Position6>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="39" Column="45" TopLine="6"/>
+      </Position6>
+      <Position7>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="40" Column="45" TopLine="6"/>
+      </Position7>
+      <Position8>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="41" Column="45" TopLine="7"/>
+      </Position8>
+      <Position9>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="42" Column="45" TopLine="8"/>
+      </Position9>
+      <Position10>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="43" Column="45" TopLine="9"/>
+      </Position10>
+      <Position11>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="44" Column="45" TopLine="10"/>
+      </Position11>
+      <Position12>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="45" Column="45" TopLine="11"/>
+      </Position12>
+      <Position13>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="46" Column="45" TopLine="12"/>
+      </Position13>
+      <Position14>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="45" Column="45" TopLine="12"/>
+      </Position14>
+      <Position15>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="46" Column="45" TopLine="12"/>
+      </Position15>
+      <Position16>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="45" Column="45" TopLine="12"/>
+      </Position16>
+      <Position17>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="87" Column="13" TopLine="53"/>
+      </Position17>
+      <Position18>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="80" Column="43" TopLine="54"/>
+      </Position18>
+      <Position19>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="96" Column="12" TopLine="68"/>
+      </Position19>
+      <Position20>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="99" Column="24" TopLine="71"/>
+      </Position20>
+      <Position21>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="101" Column="11" TopLine="78"/>
+      </Position21>
+      <Position22>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="104" Column="23" TopLine="87"/>
+      </Position22>
+      <Position23>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="103" Column="18" TopLine="86"/>
+      </Position23>
+      <Position24>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="104" Column="37" TopLine="86"/>
+      </Position24>
+      <Position25>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="105" Column="45" TopLine="93"/>
+      </Position25>
+      <Position26>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="91" Column="13" TopLine="74"/>
+      </Position26>
+      <Position27>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="64" Column="18" TopLine="40"/>
+      </Position27>
+      <Position28>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="133" Column="51" TopLine="109"/>
+      </Position28>
+      <Position29>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="134" Column="88" TopLine="113"/>
+      </Position29>
+      <Position30>
+        <Filename Value="mainwindow.pas"/>
+        <Caret Line="86" Column="11" TopLine="69"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
