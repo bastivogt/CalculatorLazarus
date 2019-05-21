@@ -46,6 +46,7 @@ type
     helpMM: TMenuItem;
     infoMM: TMenuItem;
     procedure btnCClick(Sender: TObject);
+    procedure btnCEClick(Sender: TObject);
     procedure btnEqualsClick(Sender: TObject);
     procedure btnNumberClick(Sender: TObject);
     procedure btnOperatorClick(Sender: TObject);
@@ -105,6 +106,23 @@ begin
    ZeroPressedAtFirst := False;
 
 end;
+
+
+
+// Button CE
+procedure TcalculatorFrm.btnCEClick(Sender: TObject);
+begin
+   if operantA then begin
+     outputTxt.Text := FloatToStr(baseOperation.OperantA);
+     operationTxt.Text := '';
+
+
+     operation := '';
+     ZeroPressedAtFirst := False;
+   end;
+
+end;
+
 
 
 // Operator Button
