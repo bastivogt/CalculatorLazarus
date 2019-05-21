@@ -629,7 +629,7 @@ object calculatorFrm: TcalculatorFrm
     Height = 80
     Top = 320
     Width = 80
-    Caption = '.'
+    Caption = ','
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -24

@@ -55,7 +55,7 @@ type
 
 
 
-    procedure cremoveFirstZero();
+    procedure removeFirstZero();
   private
 
   public
