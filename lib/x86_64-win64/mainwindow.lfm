@@ -447,7 +447,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 0
   end
   object btn8: TButton
     Left = 88
@@ -463,7 +463,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object btn9: TButton
     Left = 168
@@ -479,7 +479,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
   end
   object btn4: TButton
     Left = 8
@@ -495,7 +495,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
   end
   object btn5: TButton
     Left = 88
@@ -511,7 +511,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 6
   end
   object btn6: TButton
     Left = 168
@@ -527,7 +527,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 8
+    TabOrder = 7
   end
   object btn1: TButton
     Left = 8
@@ -543,7 +543,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 11
+    TabOrder = 10
   end
   object btn2: TButton
     Left = 88
@@ -559,7 +559,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 12
+    TabOrder = 11
   end
   object btn3: TButton
     Left = 168
@@ -575,7 +575,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 12
   end
   object Button10: TButton
     Left = 216
@@ -590,7 +590,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 20
+    TabOrder = 19
   end
   object btn0: TButton
     Left = 88
@@ -606,7 +606,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnNumberClick
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 15
   end
   object btnSign: TButton
     Left = 8
@@ -622,7 +622,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnSignClick
     ParentFont = False
-    TabOrder = 15
+    TabOrder = 14
   end
   object btnPoint: TButton
     Left = 168
@@ -638,7 +638,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Quality = fqDraft
     OnClick = btnPointClick
     ParentFont = False
-    TabOrder = 17
+    TabOrder = 16
   end
   object btnDivision: TButton
     Left = 264
@@ -653,7 +653,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
   end
   object btnMultiplication: TButton
     Left = 264
@@ -668,7 +668,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 8
   end
   object btnSubstract: TButton
     Left = 264
@@ -683,7 +683,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 13
   end
   object btnAddition: TButton
     Left = 264
@@ -698,7 +698,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 18
+    TabOrder = 17
   end
   object btnEquals: TButton
     Left = 344
@@ -713,7 +713,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 19
+    TabOrder = 18
   end
   object btnC: TButton
     Left = 344
@@ -728,7 +728,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 10
+    TabOrder = 9
   end
   object btnCE: TButton
     Left = 344
@@ -743,7 +743,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
   end
   object outputTxt: TEdit
     Left = 8
@@ -761,8 +761,7 @@ object calculatorFrm: TcalculatorFrm
     OnChange = outputTxtChange
     ParentFont = False
     ReadOnly = True
-    TabStop = False
-    TabOrder = 0
+    TabOrder = 20
     Text = '0'
   end
   object mainMenu: TMainMenu

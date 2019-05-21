@@ -110,7 +110,7 @@ end;
 procedure TcalculatorFrm.btnPointClick(Sender: TObject);
 begin
   if not point then begin
-    outputTxt.Text := outputTxt.Text + '.';
+    outputTxt.Text := outputTxt.Text + ',';
     point := True;
   end;
 
@@ -163,7 +163,7 @@ var tempStr: string;
 begin
   str := outputTxt.Text;
   len := Length(str);
-  if (len <= 2) and (str.StartsWith('0') and not (str.Substring(1, 1) = '.') and not ZeroPressedAtFirst ) then begin
+  if (len <= 2) and (str.StartsWith('0') and not (str.Substring(1, 1) = ',') and not ZeroPressedAtFirst ) then begin
     tempStr := str.Substring(1);
     outputTxt.Text := tempStr;
   end;

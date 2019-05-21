@@ -4,11 +4,11 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="Calculator.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="22" Y="24"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
@@ -20,22 +20,28 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainWindow"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="82"/>
-        <CursorPos X="88" Y="103"/>
+        <TopLine Value="145"/>
+        <CursorPos X="55" Y="161"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="sebastian.vogt.operation.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="98"/>
         <CursorPos X="54" Y="125"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="mainwindow.lfm"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit3>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
