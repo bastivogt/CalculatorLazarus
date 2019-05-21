@@ -86,7 +86,7 @@ implementation
 // listener division by zero
 procedure TcalculatorFrm.divisionByZero(Sender: TObject);
 begin
-  //ShowMessage('Durch 0 geht nicht!!!');
+  ShowMessage('Durch 0 geht nicht!!!');
   operationTxt.Text := 'Durch 0 geht nicht!!!';
   operantA := False;
   operation := '';
@@ -103,9 +103,7 @@ begin
    operantA := False;
    operation := '';
    ZeroPressedAtFirst := False;
-begin
 
-end;
 end;
 
 
