@@ -43,8 +43,9 @@ type
     mainMenu: TMainMenu;
     fileMM: TMenuItem;
     closeMM: TMenuItem;
-    helpMM: TMenuItem;
     infoMM: TMenuItem;
+    aboutMM: TMenuItem;
+
     procedure btnCClick(Sender: TObject);
     procedure btnCEClick(Sender: TObject);
     procedure btnEqualsClick(Sender: TObject);
@@ -55,7 +56,9 @@ type
     procedure divisionByZero(Sender: TObject);
     procedure closeMMClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure infoMMClick(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: char);
+
+    procedure aboutMMClick(Sender: TObject);
     procedure outputTxtChange(Sender: TObject);
     procedure testenBtnClick(Sender: TObject);
 
@@ -63,6 +66,14 @@ type
 
     procedure removeFirstZero();
   private
+    baseOperation: TBaseOperation;
+    point: Boolean;
+    ZeroPressedAtFirst: Boolean;
+    operantA: Boolean;
+    operantB: Boolean;
+    operation: string;
+    strOperantA: string;
+    strOperantB: string;
 
   public
 
@@ -70,14 +81,7 @@ type
 
 var
   calculatorFrm: TcalculatorFrm;
-  baseOperation: TBaseOperation;
-  point: Boolean;
-  ZeroPressedAtFirst: Boolean;
-  operantA: Boolean;
-  operantB: Boolean;
-  operation: string;
-  strOperantA: string;
-  strOperantB: string;
+
 
 
 implementation
@@ -96,6 +100,59 @@ begin
   operantA := False;
   operantB := False;
 end;
+
+// Form Key Press
+procedure TcalculatorFrm.FormKeyPress(Sender: TObject; var Key: char);
+begin
+  //ShowMessage('Form key pressed ' + Key);
+  case Key of
+    '1': begin
+      btn1.Default:= True;
+      btnNumberClick(btn1);
+    end;
+    '2':
+      btnNumberClick(btn2);
+    '3':
+      btnNumberClick(btn3);
+    '4':
+      btnNumberClick(btn4);
+    '5':
+      btnNumberClick(btn5);
+    '6':
+      btnNumberClick(btn6);
+    '7':
+      btnNumberClick(btn7);
+    '8':
+      btnNumberClick(btn8);
+    '9':
+      btnNumberClick(btn9);
+    '0':
+      btnNumberClick(btn0);
+
+    '+':
+      btnOperatorClick(btnAddition);
+    '-':
+      btnOperatorClick(btnSubstract);
+    '*':
+      btnOperatorClick(btnMultiplication);
+    '/':
+      btnOperatorClick(btnDivision);
+    '=', 'e':
+      begin
+        btnEqualsClick(btnEquals);
+        Key := #0;
+      end;
+
+    'c':
+      btnCClick(btnC);
+    'C':
+      btnCEClick(btnCE);
+  end;
+
+end;
+
+
+
 
 
 
@@ -125,14 +182,14 @@ end;
 
 
 
+
+
 // Button CE
 procedure TcalculatorFrm.btnCEClick(Sender: TObject);
 begin
    if operantA then begin
      outputTxt.Text := FloatToStr(baseOperation.OperantA);
      operationTxt.Text := '';
-
-
      operation := '';
      ZeroPressedAtFirst := False;
    end;
@@ -172,7 +229,6 @@ begin
      outputTxt.Text := FloatToStr(baseOperation.Operation(operation));
      operationTxt.Text := '';
      operantA := False;
-
      //operantB := True;
   end;
 end;
@@ -186,26 +242,14 @@ var csVal: string;
 begin
   me := Sender as TButton;
   csVal := me.Caption;
-  //ShowMessage(me.Caption);
-
-
-  //removeFirstZero();
 
   if (me.Caption = '0') and not ZeroPressedAtFirst and (Length(outputTxt.Text) < 1) then begin
     ZeroPressedAtFirst := True;
-    //ShowMessage('zp');
-
   end else begin
     outputTxt.Text := outputTxt.Text + csVal;
   end;
 
   removeFirstZero();
-
-
-
-
-
-  //ShowMessage(me.Caption);
 end;
 
 // remove first zero
@@ -219,7 +263,6 @@ begin
   if (len <= 2) and (str.StartsWith('0') and not (str.Substring(1, 1) = ',') and not ZeroPressedAtFirst ) then begin
     tempStr := str.Substring(1);
     outputTxt.Text := tempStr;
-    showMessage('rfz');
   end;
 end;
 
@@ -256,7 +299,7 @@ end;
 
 
 
-procedure TcalculatorFrm.infoMMClick(Sender: TObject);
+procedure TcalculatorFrm.aboutMMClick(Sender: TObject);
 begin
   ShowMessage('Made by Sebastian Vogt.');
 end;
