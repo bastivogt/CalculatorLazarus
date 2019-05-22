@@ -59,7 +59,6 @@ type
     procedure FormKeyPress(Sender: TObject; var Key: char);
 
     procedure aboutMMClick(Sender: TObject);
-    procedure outputTxtChange(Sender: TObject);
     procedure testenBtnClick(Sender: TObject);
 
 
@@ -107,17 +106,35 @@ begin
   //ShowMessage('Form key pressed ' + Key);
   case Key of
     '1':
-      btnNumberClick(btn1);
+      begin
+        btnNumberClick(btn1);
+        btn1.SetFocus;
+      end;
     '2':
-      btnNumberClick(btn2);
+      begin
+        btnNumberClick(btn2);
+        btn2.SetFocus;
+      end;
     '3':
-      btnNumberClick(btn3);
+      begin
+        btnNumberClick(btn3);
+        //btn3.SetFocus;
+      end;
     '4':
-      btnNumberClick(btn4);
+      begin
+        btnNumberClick(btn4);
+        //btn4.SetFocus;
+      end;
     '5':
-      btnNumberClick(btn5);
+      begin
+        btnNumberClick(btn5);
+        //btn5.SetFocus;
+      end;
     '6':
-      btnNumberClick(btn6);
+      begin
+        btnNumberClick(btn6);
+        //btn6.SetFocus;
+      end;
     '7':
       btnNumberClick(btn7);
     '8':
@@ -126,7 +143,8 @@ begin
       btnNumberClick(btn9);
     '0':
       btnNumberClick(btn0);
-
+    ',':
+      btnPointClick(btnPoint);
     '+':
       btnOperatorClick(btnAddition);
     '-':
@@ -135,12 +153,8 @@ begin
       btnOperatorClick(btnMultiplication);
     '/':
       btnOperatorClick(btnDivision);
-    '=', 'e':
-      begin
-        btnEqualsClick(btnEquals);
-        Key := #0;
-      end;
-
+    '=', 'e', #13:
+      btnEqualsClick(btnEquals);
     'c':
       btnCClick(btnC);
     'C':
@@ -158,7 +172,8 @@ end;
 // listener division by zero
 procedure TcalculatorFrm.divisionByZero(Sender: TObject);
 begin
-  ShowMessage('Durch 0 geht nicht!!!');
+  //ShowMessage('Durch 0 geht nicht!!!');
+  Application.MessageBox('Division durch 0 geht nicht!!!', 'Fehler', MB_OK + MB_ICONERROR);
   operationTxt.Text := 'Durch 0 geht nicht!!!';
   operantA := False;
   operation := '';
@@ -169,7 +184,10 @@ end;
 
 // Button C
 procedure TcalculatorFrm.btnCClick(Sender: TObject);
+var me: TButton;
 begin
+  me := Sender as TButton;
+  me.SetFocus;
    outputTxt.Text := '0';
    operationTxt.Text := '';
    operantA := False;
@@ -184,7 +202,10 @@ end;
 
 // Button CE
 procedure TcalculatorFrm.btnCEClick(Sender: TObject);
+var me: TButton;
 begin
+  me := Sender as TButton;
+  me.SetFocus;
    if operantA then begin
      outputTxt.Text := FloatToStr(baseOperation.OperantA);
      operationTxt.Text := '';
@@ -201,6 +222,7 @@ procedure TcalculatorFrm.btnOperatorClick(Sender: TObject);
 var me: TButton;
 begin
   me := Sender as TButton;
+  me.SetFocus;
 
   if not operantA then begin
     strOperantA := outputTxt.Text;
@@ -219,7 +241,10 @@ end;
 
 // Equals Button
 procedure TcalculatorFrm.btnEqualsClick(Sender: TObject);
+var me: TButton;
 begin
+  me := Sender as TButton;
+  me.SetFocus;
   if operantA then begin
      strOperantB := outputTxt.Text;
      baseOperation.OperantB := StrToFloat(strOperantB);
@@ -239,6 +264,7 @@ var me: TButton;
 var csVal: string;
 begin
   me := Sender as TButton;
+  me.SetFocus;
   csVal := me.Caption;
 
   if (me.Caption = '0') and not ZeroPressedAtFirst and (Length(outputTxt.Text) < 1) then begin
@@ -268,7 +294,10 @@ end;
 
 // btnPoint
 procedure TcalculatorFrm.btnPointClick(Sender: TObject);
+var me: TButton;
 begin
+  me := Sender as TButton;
+  me.SetFocus;
   if not point then begin
     outputTxt.Text := outputTxt.Text + ',';
     point := True;
@@ -279,8 +308,11 @@ end;
 // btnSign
 procedure TcalculatorFrm.btnSignClick(Sender: TObject);
 var tempStr: string;
-var str: string;
+  str: string;
+  me: TButton;
 begin
+  me := Sender as TButton;
+  me.SetFocus;
   str := outputTxt.Text;
   if str.StartsWith('-') then begin
     tempStr := str.Substring(1);
@@ -303,22 +335,6 @@ begin
   //Application.MessageBox('Press either button', 'MessageBoxDemo', MB_ICONQUESTION + MB_YESNO);
   Application.MessageBox('Made by Sebastian Vogt.', 'Info', MB_OK + MB_ICONINFORMATION);
 
-end;
-
-// outputTxt change
-procedure TcalculatorFrm.outputTxtChange(Sender: TObject);
-(*var me: TEdit;
-var len: Integer;
-var str: string;
-var tempStr: string;*)
-begin
-  (*me := Sender as TEdit;
-  str := me.Text;
-  len := Length(str);
-  if (len <= 2) and (str.StartsWith('0') and not (str.Substring(1, 1) = '.') and not ZeroPressedAtFirst ) then begin
-    tempStr := str.Substring(1);
-    me.Text := tempStr;
-  end;*)
 end;
 
 

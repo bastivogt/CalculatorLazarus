@@ -1221,7 +1221,6 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     MaxLength = 16
-    OnChange = outputTxtChange
     ParentFont = False
     ReadOnly = True
     TabOrder = 20
@@ -1234,7 +1233,7 @@ object calculatorFrm: TcalculatorFrm
     Width = 75
     Caption = 'Testen'
     OnClick = testenBtnClick
-    TabOrder = 22
+    TabOrder = 21
     TabStop = False
   end
   object btn7: TButton
@@ -1395,7 +1394,7 @@ object calculatorFrm: TcalculatorFrm
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabOrder = 21
+    TabOrder = 22
     TabStop = False
   end
   object btn0: TButton
