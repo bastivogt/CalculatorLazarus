@@ -17,13 +17,6 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TcalculatorFrm, calculatorFrm);
-  baseOperation := TBaseOperation.Create;
-  baseOperation.OnDivisionByZero := @calculatorFrm.divisionByZero;
-
-  point := False;
-  ZeroPressedAtFirst := False;
-  operantA := False;
-  operantB := False;
   Application.Run;
 end.
 

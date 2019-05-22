@@ -54,6 +54,7 @@ type
     procedure btnSignClick(Sender: TObject);
     procedure divisionByZero(Sender: TObject);
     procedure closeMMClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure infoMMClick(Sender: TObject);
     procedure outputTxtChange(Sender: TObject);
     procedure testenBtnClick(Sender: TObject);
@@ -84,6 +85,21 @@ implementation
 {$R *.lfm}
 
 { TcalculatorFrm }
+// CREATE
+procedure TcalculatorFrm.FormCreate(Sender: TObject);
+begin
+  baseOperation := TBaseOperation.Create;
+  baseOperation.OnDivisionByZero := @calculatorFrm.divisionByZero;
+
+  point := False;
+  ZeroPressedAtFirst := False;
+  operantA := False;
+  operantB := False;
+end;
+
+
+
+
 // listener division by zero
 procedure TcalculatorFrm.divisionByZero(Sender: TObject);
 begin
@@ -220,6 +236,8 @@ procedure TcalculatorFrm.closeMMClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
+
+
 
 procedure TcalculatorFrm.infoMMClick(Sender: TObject);
 begin

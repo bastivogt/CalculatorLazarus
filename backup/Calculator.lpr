@@ -22,7 +22,8 @@ begin
 
   point := False;
   ZeroPressedAtFirst := False;
-  operantA := false;
+  operantA := False;
+  operantB := False;
   Application.Run;
 end.
 
