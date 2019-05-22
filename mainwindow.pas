@@ -186,10 +186,12 @@ var csVal: string;
 begin
   me := Sender as TButton;
   csVal := me.Caption;
+  //ShowMessage(me.Caption);
 
 
+  //removeFirstZero();
 
-  if (me.Caption = '0') and not ZeroPressedAtFirst and (Length(outputTxt.Text) <= 1) then begin
+  if (me.Caption = '0') and not ZeroPressedAtFirst and (Length(outputTxt.Text) < 1) then begin
     ZeroPressedAtFirst := True;
     //ShowMessage('zp');
 
@@ -204,6 +206,20 @@ begin
 
 
   //ShowMessage(me.Caption);
+end;
+
+// remove first zero
+procedure TcalculatorFrm.removeFirstZero();
+var len: Integer;
+var str: string;
+var tempStr: string;
+begin
+  str := outputTxt.Text;
+  len := Length(str);
+  if (len <= 2) and (str.StartsWith('0') and not (str.Substring(1, 1) = ',') and not ZeroPressedAtFirst ) then begin
+    tempStr := str.Substring(1);
+    outputTxt.Text := tempStr;
+  end;
 end;
 
 
@@ -241,7 +257,7 @@ end;
 
 procedure TcalculatorFrm.infoMMClick(Sender: TObject);
 begin
-  ShowMessage('Info');
+  ShowMessage('Made by Sebastian Vogt.');
 end;
 
 // outputTxt change
@@ -260,19 +276,7 @@ begin
   end;*)
 end;
 
-// remove first zero
-procedure TcalculatorFrm.removeFirstZero();
-var len: Integer;
-var str: string;
-var tempStr: string;
-begin
-  str := outputTxt.Text;
-  len := Length(str);
-  if (len <= 2) and (str.StartsWith('0') and not (str.Substring(1, 1) = ',') and not ZeroPressedAtFirst ) then begin
-    tempStr := str.Substring(1);
-    outputTxt.Text := tempStr;
-  end;
-end;
+
 
 // testenBtn
 procedure TcalculatorFrm.testenBtnClick(Sender: TObject);

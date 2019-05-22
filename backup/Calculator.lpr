@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, MainWindow, sebastian.vogt.operation
+  Forms, MainWindow//, sebastian.vogt.operation
   { you can add units after this };
 
 {$R *.res}
@@ -17,13 +17,6 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TcalculatorFrm, calculatorFrm);
-  baseOperation := TBaseOperation.Create;
-  baseOperation.OnDivisionByZero := @calculatorFrm.divisionByZero;
-
-  point := False;
-  ZeroPressedAtFirst := False;
-  operantA := False;
-  operantB := False;
   Application.Run;
 end.
 
