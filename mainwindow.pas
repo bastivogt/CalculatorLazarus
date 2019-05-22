@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
-  ExtCtrls, sebastian.vogt.operation;
+  ExtCtrls, sebastian.vogt.operation, LCLType;
 
 type
 
@@ -296,10 +296,13 @@ begin
 end;
 
 
-
+// Info about
 procedure TcalculatorFrm.aboutMMClick(Sender: TObject);
 begin
-  ShowMessage('Made by Sebastian Vogt.');
+  //ShowMessage('Made by Sebastian Vogt.');
+  //Application.MessageBox('Press either button', 'MessageBoxDemo', MB_ICONQUESTION + MB_YESNO);
+  Application.MessageBox('Made by Sebastian Vogt.', 'Info', MB_OK + MB_ICONINFORMATION);
+
 end;
 
 // outputTxt change

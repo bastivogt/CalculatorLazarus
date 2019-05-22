@@ -1,9 +1,8 @@
 object calculatorFrm: TcalculatorFrm
-  Left = 422
+  Left = 324
   Height = 460
-  Top = 166
+  Top = 157
   Width = 432
-  AlphaBlend = True
   Caption = 'Rechner'
   ClientHeight = 440
   ClientWidth = 432
