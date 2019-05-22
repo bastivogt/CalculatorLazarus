@@ -301,7 +301,7 @@ procedure TcalculatorFrm.aboutMMClick(Sender: TObject);
 begin
   //ShowMessage('Made by Sebastian Vogt.');
   //Application.MessageBox('Press either button', 'MessageBoxDemo', MB_ICONQUESTION + MB_YESNO);
-  Application.MessageBox('Made by Sebastian Vogt', 'Info', MB_OK + MB_ICONINFORMATION);
+  Application.MessageBox('Made by Sebastian Vogt.', 'Info', MB_OK + MB_ICONINFORMATION);
 
 end;
 

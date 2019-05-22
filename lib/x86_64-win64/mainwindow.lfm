@@ -1,11 +1,12 @@
 object calculatorFrm: TcalculatorFrm
-  Left = 324
+  Left = 487
   Height = 460
-  Top = 157
+  Top = 195
   Width = 432
   Caption = 'Rechner'
   ClientHeight = 440
   ClientWidth = 432
+  Constraints.MaxHeight = 460
   Constraints.MaxWidth = 432
   Constraints.MinWidth = 432
   Icon.Data = {
